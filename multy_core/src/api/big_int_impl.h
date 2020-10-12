@@ -31,7 +31,7 @@
  */
 struct MULTY_CORE_API BigInt : public ::multy_core::internal::ObjectBase<BigInt>
 {
-    explicit BigInt(const char* value);
+    explicit BigInt(const char* value, const int base = 10);
     explicit BigInt(int32_t value = 0);
     explicit BigInt(int64_t value);
     explicit BigInt(uint64_t value);

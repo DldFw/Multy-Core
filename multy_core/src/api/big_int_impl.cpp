@@ -60,10 +60,10 @@ void signed_import(T value, mpz_t gmp_value)
 
 } // namespace
 
-BigInt::BigInt(const char* value)
+BigInt::BigInt(const char* value, const int base /*=10*/)
 {
     THROW_IF_WALLY_ERROR2(
-            mpz_init_set_str(m_value, value, 10),
+            mpz_init_set_str(m_value, value, base),
             ERROR_BIG_INT_INVALID_STRING,
             "Failed to initialize BigInt from string.");
 }
